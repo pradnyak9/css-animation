@@ -47,15 +47,58 @@ html, body{
   left: 0px;
   animation-name: drive;
   animation-duration: 3s;
-  
+  animation-fill-mode: both;
+  /* animation-delay: 2s; */
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  /* transform: scale(2); */
 }
 
+.luigi {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  /* animation-delay: 2s; */
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+  
+
+}
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0;
+  animation: wind 50s linear infinite reverse;
+}
 /*// KEYFRAMES //*/
 
 @keyframes drive {
-  from { transform: translateX(-100)}
+  from { transform: translateX(-200px)}
   to { transform: translateX(1000px)}
 }
+
+@keyframes wind {
+  from {left: -300px}
+  to { left: 100%}
+  
+}
+
 
 
 
